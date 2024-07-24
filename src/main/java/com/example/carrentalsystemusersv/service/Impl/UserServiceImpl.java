@@ -53,6 +53,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity<Object> getCarById(Integer id) {
+
+
         System.out.println(2);
         ResponseEntity<Object> exchange = restTemplate.exchange("http://localhost:9001/api/car/customer/get-car-byId/" + id,
                 HttpMethod.GET, null, Object.class);
